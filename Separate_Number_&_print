@@ -1,0 +1,30 @@
+Print the same Number/ if 1024 / Print 1024
+
+
+#include<stdio.h>
+int number,length,t_number,t_check;
+int length_of_number(number);
+int main()
+{
+	printf("Give me a number:\n");
+	scanf("%d",&number);
+	length=length_of_number(number);         //Length=1000 for 1024
+		while(length!=0)
+		{
+			t_number=number/length;  printf("%d\n",t_number);
+			number=number%length;
+			length=length/10;
+		}
+		printf("%d\n",number);
+		
+}
+
+int length_of_number(number)
+{
+	t_number=number;
+	while(t_check>9)     //the length is 100// given number is 123.
+	{
+	t_check=t_number/10;
+	length=length*10;
+	}
+}
